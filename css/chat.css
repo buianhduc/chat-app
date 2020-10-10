@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100vh;
+}
+
+.title {
+  background-color: #3d7ad6;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+#conversation-name {
+  background-color: white;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #c9c7fc;
+}
+
+.messageView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 2*64px);
+}
+
+.messageView .conversation-detail {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.messageView .MessageInput {
+  border-top: 1px solid #c9c7fc;
+}
+
+.messageView .MessageInput form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.messageView .MessageInput form input {
+  border: 0;
+  width: 100%;
+}
+
+.messageView .MessageInput form button {
+  position: relative;
+  right: 0;
+}
+
+.messageView .conversation-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-Y: auto;
+}
+
+.messageView .conversation-detail .sentMess {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.messageView .conversation-detail .recievedMess {
+  width: 100vw;
+}
+
+.messageView .conversation-detail .message {
+  max-width: 45%;
+  border-radius: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px;
+}
+
+.messageView .conversation-detail .sentMess .SentMessContent {
+  background-color: aquamarine;
+  right: 0;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.messageView .conversation-detail .recievedMess .RecievedMessContent {
+  background-color: #a7aaaa;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: 0;
+}
+/*# sourceMappingURL=chat.css.map */

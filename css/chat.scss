@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100vh;
+}
+.title{
+    background-color: rgb(61, 122, 214);
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#conversation-name{
+    background-color:white;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(201, 199, 252);
+}
+.messageView{
+    display: flex;
+    flex-direction: column;
+    .conversation-detail{
+        flex-grow: 1;
+    }
+
+    .MessageInput{
+        border-top: 1px solid  rgb(201, 199, 252);
+        form{
+            display: flex;
+            input{
+                border: 0;
+                width: 100%;
+            }
+            button{
+                position: relative;
+                right: 0;
+            }
+        }
+    }
+    height: calc(100vh - 2*64px);
+    .conversation-detail{
+        display: flex;
+        flex-direction: column;
+        overflow-Y: auto;
+        .sentMess{
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+        }
+        .recievedMess{
+            width: 100vw;
+        }
+        .message{
+            max-width: 45%;
+            border-radius: 10px;
+            width: max-content;
+            // position: absolute;
+            padding: 10px;
+        }
+        .sentMess .SentMessContent{
+            background-color: aquamarine;
+            right: 0;
+            align-content: flex-end;
+        }
+        .recievedMess .RecievedMessContent{
+            background-color: rgb(167, 170, 170);
+            justify-content: flex-start;
+            left: 0;
+        }
+    }
+}
