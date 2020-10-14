@@ -43,8 +43,25 @@ view.setActiveScreen = (screenName) => {
         controller.login(dataRegister);
       })
     break
-  }
+      case 'chatPage':
+        document.getElementById('app').innerHTML = components.chatPage;
+        var form = document.getElementById('messageInput');
+        form.addEventListener('submit',(event) => {
+          event.preventDefault();
+          view.addMessage(form.message.value);
+        }) 
+      break
+    }
 }
 view.setErrorMessage = (elementId, message) => {
   document.getElementById(elementId).innerText = message
+}
+
+view.addMessage = (content) => {
+  const conversation_detail = document.getElementsByClassName('conversation-detail')[0];
+  conversation_detail.insertAdjacentHTML('beforeend',`
+  <div class = "sentMess d-flex flex-row justify-content-end">
+  <div class="SentMessContent message">${content}</div>
+</div>
+  `);
 }

@@ -19,7 +19,7 @@ model.login = async ({email, password}) => {
     const response = await firebase.auth().signInWithEmailAndPassword(email, password)
     console.log(response)
     if (response.user.emailVerified) {
-      view.setActiveScreen('welcomeScreen')
+      view.setActiveScreen('chatApp')
     } else {
       alert('Please verify email')
     }

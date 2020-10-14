@@ -68,3 +68,7 @@ controller.login = ({email, password}) => {
       model.login({email, password})
     }
 }
+
+controller.addMessage = (content) => {
+  view.addMessage(content)
+}

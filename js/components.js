@@ -64,3 +64,21 @@ components.loginPage = `
 </div>
 </div>
 `
+components.chatPage = `
+<div class="container-fluid">
+      <section class="title bg-blue"><h1>MINDX CHAT</h1></section>
+      <section id = "conversation-name"><h3>First Conversation</h3></section>
+      <div class="messageView">
+        <div class="conversation-detail">
+            
+        </div>
+      <div class="MessageInput">
+        <form action="" class = "md-form" id = "messageInput">
+          <input class = "form-control" type="text" id = "message" name = "message">
+          <label for="message">Enter Message...</label>
+          <span><button class = "btn btn-primary" type = "submit"> Send </button></span>
+        </form>
+      </div>
+    </div>
+    </div>
+  `

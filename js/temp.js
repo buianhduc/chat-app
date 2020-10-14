@@ -17,21 +17,21 @@ const form = document.getElementById('messageInput');
 
 function sentMess(content) {
     return `
-    <section class = "sentMess">
-        <div class="SentMessContent message">${content}</div>
-    </section>
+    <div class = "sentMess d-flex flex-row justify-content-end">
+              <div class="SentMessContent message">${content}</div>
+            </div>
     `
 }
 function receiveMess(owner,content){
     return `
-        <section class = "recievedMess">
+        <div class = "recievedMess">
             <div class="owner">
                 ${owner}
             </div>
             <div class="RecievedMessContent message">
                 ${content}
             </div>
-        </section>
+        </div>
     `
 }
 // code lam deo gi dung code nua
@@ -40,7 +40,3 @@ form.addEventListener('submit', (event) => {
     const conversation_detail = document.getElementsByClassName('conversation-detail')[0];
     conversation_detail.insertAdjacentHTML('beforeend',sentMess(form.message.value));
 })
-window.setInterval(function() {
-    var elem = document.getElementByClassName('messageView')[0];
-    elem.scrollTop = elem.scrollHeight;
-}, 50k );

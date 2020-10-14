@@ -51,12 +51,9 @@
         flex-direction: column;
         overflow-Y: auto;
         .sentMess{
-            width: 100vw;
+            // width: 100vw;
             display: flex;
             flex-direction: row;
-        }
-        .recievedMess{
-            width: 100vw;
         }
         .message{
             max-width: 45%;
@@ -65,15 +62,23 @@
             // position: absolute;
             padding: 10px;
         }
+        .sentMess{
+            padding: 10px;
+        }
+        .recievedMess{
+            padding: 10px;
+        }
         .sentMess .SentMessContent{
+            position: relative;
             background-color: aquamarine;
-            right: 0;
-            align-content: flex-end;
+            float: right;
+            align-items: flex-end;
         }
         .recievedMess .RecievedMessContent{
+            position: relative;
             background-color: rgb(167, 170, 170);
-            justify-content: flex-start;
-            left: 0;
+            justify-items: flex-start;
+            float: left;
         }
     }
 }

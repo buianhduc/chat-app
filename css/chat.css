@@ -88,7 +88,6 @@
 }
 
 .messageView .conversation-detail .sentMess {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,10 +95,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.messageView .conversation-detail .recievedMess {
-  width: 100vw;
 }
 
 .messageView .conversation-detail .message {
@@ -111,18 +106,27 @@
   padding: 10px;
 }
 
+.messageView .conversation-detail .sentMess {
+  padding: 10px;
+}
+
+.messageView .conversation-detail .recievedMess {
+  padding: 10px;
+}
+
 .messageView .conversation-detail .sentMess .SentMessContent {
+  position: relative;
   background-color: aquamarine;
-  right: 0;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
+  float: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .messageView .conversation-detail .recievedMess .RecievedMessContent {
+  position: relative;
   background-color: #a7aaaa;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  left: 0;
+  justify-items: flex-start;
+  float: left;
 }
 /*# sourceMappingURL=chat.css.map */
