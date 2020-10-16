@@ -2,7 +2,7 @@ const view = {}
 view.setActiveScreen = (screenName) => {
   switch(screenName) {
     case 'welcomeScreen':
-      document.getElementById('app').innerHTML 
+      document.getElementById('app').innerHTML
       = components.welcomPage
     break
     case 'registerPage':
@@ -49,7 +49,7 @@ view.setActiveScreen = (screenName) => {
         form.addEventListener('submit',(event) => {
           event.preventDefault();
           view.addMessage(form.message.value);
-        }) 
+        })
       break
     }
 }
@@ -64,4 +64,18 @@ view.addMessage = (content) => {
   <div class="SentMessContent message">${content}</div>
 </div>
   `);
+}
+
+view.recievedMess = (content, sender) => {
+  const conversation_detail = document.getElementsByClassName('conversation-detail')[0];
+  conversation_detail.insertAdjacentHTML('beforeend', `
+  <div class = "recievedMess">
+            <div class="owner">
+                ${sender}
+            </div>
+            <div class="RecievedMessContent message">
+                ${content}
+            </div>
+        </div>
+`)
 }
